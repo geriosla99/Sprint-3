@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="../scripts/script.js"></script>
+   
 </head>
 
 <body>
@@ -38,7 +38,25 @@
         </div>
     </nav>
     <div class="container-fluid">
-        
+        <div>
+            <button onclick="Car()">Articulos de mi carrito</button>
+            <div class="productoId">
+                <h2 class="productoTitulo"></h2>
+                <img src="" class="productoImagenUrl" alt="">
+                <p class="productoPrecio"></p>
+                <p class="productoCantidad"></p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <form action="">
+            <h1>Información de pago</h1>
+            <input type="text" placeholder="Nombre Completo"><br>
+            <input type="text" placeholder="Correo electrónico"><br>
+            <input type="text" placeholder="No. de tarjeta"><br>
+            <input type="text" placeholder="Fecha de Vencimiento"><br>
+            <input type="button" value="Pagar">
+        </form>
     </div>
     <footer class="text-center footer-style">
         <div class="container">
@@ -76,5 +94,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
+        <script src="../scripts/script.js"></script>
 </body>
 </html>
