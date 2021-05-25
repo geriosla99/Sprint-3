@@ -12,7 +12,7 @@
    
 </head>
 
-<body>
+<body onload="Car()">
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <a class="navbar-brand" href="#"><img id="logo" src="../images/GRL-Logo-Full.jpg" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -37,27 +37,73 @@
             </ul>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div>
-            <button onclick="Car()">Articulos de mi carrito</button>
-            <div class="productoId">
-                <h2 class="productoTitulo"></h2>
-                <img src="" class="productoImagenUrl" alt="">
-                <p class="productoPrecio"></p>
-                <p class="productoCantidad"></p>
-            </div>
+    <div class="container " >
+        <div class="row">
+            <table class="table mt-10">
+                <thead>
+                  <tr>
+                    <th scope="col">IDPRODUCTO</th>
+                    <th scope="col">IMAGEN</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">PRECIO</th>
+                    <th scope="col">CANTIDAD</th>
+                  </tr>
+                </thead>
+                <tbody id="contenidoCarrito">
+                  <tr>
+                    <th scope="row">1</th>
+                    <td><img src="" class="productoImagenUrl" alt="" width="100"></td>
+                    <td class="productoTitulo"></td>
+                    <td class="productoPrecio"></td>
+                    <td class="productoCantidad"></td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
     </div>
-    <div>
-        <form action="">
-            <h1>Información de pago</h1>
-            <input type="text" placeholder="Nombre Completo"><br>
-            <input type="text" placeholder="Correo electrónico"><br>
-            <input type="text" placeholder="No. de tarjeta"><br>
-            <input type="text" placeholder="Fecha de Vencimiento"><br>
-            <input type="button" value="Pagar">
-        </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <table class="table ">
+                    <thead>
+                      <tr>
+                        <th scope="col-1">Descripción</th>
+                        <th scope="col-1">Valores</th>
+                      </tr>
+                    </thead>
+                    <tbody id="contenidoCarrito">
+                        <tr>
+                          <th scope="row">SUB TOTAL</th>
+                          <td><p id="subtotal"></p></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">IVA 19%</th>
+                          <td><p id="iva"></p></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">TOTAL A PAGAR</th>
+                          <td><p id="total"></p></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>            
+        </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form id="tuForm">
+                    <h1>Información de pago</h1>
+                    <input class="col-8" type="text" placeholder="Nombre Completo"><br>
+                    <input class="col-8" type="text" placeholder="Correo electrónico"><br>
+                    <input class="col-8" type="text" placeholder="No. de tarjeta"><br>
+                    <input class="col-8" type="text" placeholder="Fecha de Vencimiento"><br>
+                    <input class="col-8" onclick="pagar()" type="button" value="Pagar">
+                </form>
+            </div>            
+        </div>
+    </div>
+    
     <footer class="text-center footer-style">
         <div class="container">
             <div class="row">
